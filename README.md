@@ -1,12 +1,14 @@
 # Agentflow_AI — Agentic AI Operations Automation Platform
 
+[![Repository](https://img.shields.io/badge/GitHub-Public%20Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/A-aj007/AgenticAi)
 [![Live App on Vercel](https://img.shields.io/badge/Live%20Demo-agentic--ai--livid.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://agentic-ai-livid.vercel.app/)
 [![API on Render](https://img.shields.io/badge/API%20Engine-Render%20Live-46E3B7?style=for-the-badge&logo=render&logoColor=black)](https://agenticai-o06a.onrender.com/api/health)
 [![Database](https://img.shields.io/badge/Database-MongoDB%20Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://cloud.mongodb.com)
 
-> 🌐 **Live Frontend Application (Vercel)**: [https://agentic-ai-livid.vercel.app](https://agentic-ai-livid.vercel.app)  
+> 🌐 **Live Production Application (Vercel)**: [https://agentic-ai-livid.vercel.app](https://agentic-ai-livid.vercel.app)  
 > 🚀 **Live Backend API Engine (Render)**: [https://agenticai-o06a.onrender.com](https://agenticai-o06a.onrender.com)  
-> 🩺 **API Health Check**: [https://agenticai-o06a.onrender.com/api/health](https://agenticai-o06a.onrender.com/api/health)
+> 🩺 **API Health Check**: [https://agenticai-o06a.onrender.com/api/health](https://agenticai-o06a.onrender.com/api/health)  
+> 📂 **Public GitHub Repository**: [https://github.com/A-aj007/AgenticAi](https://github.com/A-aj007/AgenticAi)
 
 ---
 
@@ -161,54 +163,74 @@ mongosh "mongodb://127.0.0.1:27017/agentflow_ai" --eval "db.users.find({}, { nam
 
 ---
 
-## 🚀 Quick Start (Run Locally in 2 Minutes)
+## 🚀 Quick Start (Setup & Run Locally)
 
 ### 1. Prerequisites
 - **Node.js**: v18.0.0 or later (v20+ recommended)
 - **npm**: v9.0.0 or later
+- **Git**: Installed and configured
 
 ---
 
-### 2. Installation
+### 2. Clone the Repository
+Clone this public repository to your local machine:
+```bash
+git clone https://github.com/A-aj007/AgenticAi.git
+cd AgenticAi
+```
 
-Clone the repository and install all dependencies (root, server, and client) with a single command:
+---
 
+### 3. Install Dependencies
+Install dependencies across all workspaces (root, server, and client) with a single command:
 ```bash
 npm run install:all
 ```
 
 ---
 
-### 3. Environment Configuration
+### 4. Environment Configuration
+Create or configure your `server/.env` file with your settings:
 
-Default environment files are already pre-configured in `server/.env`.
-
-To connect to your **MongoDB Atlas Cloud Cluster**, replace `<db_username>` with your actual MongoDB username in `server/.env`:
 ```env
-MONGODB_URI=mongodb+srv://YOUR_USERNAME:o9xkNmIiypPGyeTX@agenticai.9mh6cmx.mongodb.net/agentflow_ai?appName=AgenticAI
+PORT=5001
+NODE_ENV=development
+CLIENT_URL=http://localhost:3000
+
+# Security Keys
+JWT_SECRET=super_secret_jwt_key_agentflow_ai_2026_secure
+JWT_EXPIRES_IN=7d
+CREDENTIAL_ENCRYPTION_KEY=0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
+
+# Database (Local persistent fallback or Cloud MongoDB Atlas)
+MONGODB_URI=mongodb://127.0.0.1:27017/agentflow_ai
+# For Cloud MongoDB Atlas:
+# MONGODB_URI=mongodb+srv://<username>:<password>@agenticai.9mh6cmx.mongodb.net/agentflow_ai?retryWrites=true&w=majority
+
+# Optional AI Providers (For live LLM workflow synthesis)
+GEMINI_API_KEY=YOUR_GEMINI_API_KEY
+OPENROUTER_API_KEY=YOUR_OPENROUTER_KEY
 ```
 
-*(If `MONGODB_URI` is left blank, all data is automatically saved locally to `server/data/db/` on your disk and kept across restarts).*
+> [!NOTE]
+> **Zero-Config Database**: If no `MONGODB_URI` is supplied, the server automatically starts an embedded disk-backed database at `server/data/db/` so you can start developing immediately without installing MongoDB!
 
 ---
 
-### 4. Run the Application
-
-Start both the backend server (`:5001`) and frontend client (`:3000`) concurrently:
-
+### 5. Start Development Server
+Start both the Express API backend (`:5001`) and Next.js frontend client (`:3000`) concurrently:
 ```bash
 npm run dev
 ```
 
 ---
 
-### 5. Access the Web Application
-
+### 6. Access the Application
 - Open your browser at: **[http://localhost:3000](http://localhost:3000)**
-- **Default Seeded Account**:
+- **Default Seeded Admin / Operator Account**:
   - **Email**: `operator@agentflow.ai`
   - **Password**: `Password123!`
-  *(Or register a new account on `/register` — it will be saved permanently).*
+  *(Or register a new account on `/register` — all credentials and workflows are persisted).*
 
 ---
 
