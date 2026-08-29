@@ -1,9 +1,13 @@
 # 🚀 Full-Stack Deployment Guide: Render (Backend) + Vercel (Frontend)
 
-This guide walks you through deploying **Agentflow_AI** to production with:
-- **Frontend**: [Vercel](https://vercel.com) (Next.js)
-- **Backend API & WebSockets**: [Render](https://render.com) (Node.js Express + Socket.IO)
-- **Database**: [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) (Cloud Cluster)
+> 🌐 **Live Production Application**: [https://agentic-ai-livid.vercel.app](https://agentic-ai-livid.vercel.app/)  
+> 🚀 **Live Backend API**: [https://agenticai-o06a.onrender.com](https://agenticai-o06a.onrender.com/)  
+> 🩺 **Health Check**: [https://agenticai-o06a.onrender.com/api/health](https://agenticai-o06a.onrender.com/api/health)
+
+This guide documents the production deployment of **Agentflow_AI** with:
+- **Frontend**: [Vercel](https://agentic-ai-livid.vercel.app/) (Next.js)
+- **Backend API & WebSockets**: [Render](https://agenticai-o06a.onrender.com/) (Node.js Express + Socket.IO)
+- **Database**: [MongoDB Atlas](https://cloud.mongodb.com) (Cloud Cluster)
 
 ---
 

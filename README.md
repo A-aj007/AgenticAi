@@ -1,6 +1,12 @@
 # Agentflow_AI — Agentic AI Operations Automation Platform
 
-An enterprise-grade, full-stack AI Operations Automation Platform that turns natural language automation prompts into executable visual workflows. Workflows are rendered on an interactive **React Flow** canvas and executed across a 5-stage chain of cooperating AI agents with third-party tool integrations (Gmail, Slack, Discord, Google Sheets), real-time **Socket.IO** event streaming, background queues, and a persistent audit trail in **MongoDB**.
+[![Live App on Vercel](https://img.shields.io/badge/Live%20Demo-agentic--ai--livid.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://agentic-ai-livid.vercel.app/)
+[![API on Render](https://img.shields.io/badge/API%20Engine-Render%20Live-46E3B7?style=for-the-badge&logo=render&logoColor=black)](https://agenticai-o06a.onrender.com/api/health)
+[![Database](https://img.shields.io/badge/Database-MongoDB%20Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://cloud.mongodb.com)
+
+> 🌐 **Live Frontend Application (Vercel)**: [https://agentic-ai-livid.vercel.app](https://agentic-ai-livid.vercel.app)  
+> 🚀 **Live Backend API Engine (Render)**: [https://agenticai-o06a.onrender.com](https://agenticai-o06a.onrender.com)  
+> 🩺 **API Health Check**: [https://agenticai-o06a.onrender.com/api/health](https://agenticai-o06a.onrender.com/api/health)
 
 ---
 
